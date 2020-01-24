@@ -1,6 +1,6 @@
 {
   "name": "djoola-fasthttp",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "An alternative, express-like library based on node's core http module.",
   "main": "index.js",
   "scripts": {
