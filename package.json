@@ -1,0 +1,23 @@
+{
+  "name": "djoola-fasthttp",
+  "version": "0.1.0",
+  "description": "An alternative, express-like library based on node's core http module.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "djoola",
+    "fast",
+    "http",
+    "express-like"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "path-to-regexp": "^6.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
+}
