@@ -1,6 +1,7 @@
 const http = require("http");
 const FastHttpRouteHandler = require("./lib/FastHttpRouteHandler");
 const FastHttpMiddlewareHandler = require("./lib/FastHttpMiddlewareHandler");
+const FastHttpStaticMiddleware = require("./lib/FastHttpStaticMiddleware")
 
 /**
  * A simple wrapper around a Node HTTP Server.
@@ -153,6 +154,21 @@ class FastHttpServer {
   }
 }
 
+/**
+ * Create a new FastHttpServer instance.
+ */
 const fasthttp = () => new FastHttpServer();
+
 exports = module.exports = fasthttp;
+
+/** Create a new route handler. */
 exports.Router = () => FastHttpRouteHandler.create(http.METHODS);
+
+/**
+ * Create a static file middleware.
+ * @param {string} root The root directory from which to serve static assets.
+ * @param {object} options An object with file processing options.
+ */
+exports.static = function (root, options) {
+  return new FastHttpStaticMiddleware(root, options);
+};
